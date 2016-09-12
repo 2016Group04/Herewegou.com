@@ -1,0 +1,17 @@
+
+#footer {
+	padding-top: 40px;
+	padding-bottom: 30px;
+	text-align: center;
+	font-family: 微软雅黑;
+	font-size: 14px;
+}
+
+#footer .links a {
+	margin: 0 10px;
+	color: #666;
+}
+
+#footer .copyright {
+	margin: 10px 0;
+}

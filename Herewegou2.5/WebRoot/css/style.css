@@ -1,0 +1,521 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+li {
+	list-style: none;
+}
+
+label, select {
+	padding-top: 5px;
+	font-family: Microsoft JhengHei;
+	font-size:16px;
+}
+
+select {
+	font-size: 16px;
+	line-height: 16px;
+	color: white;
+	border:none;
+	border-radius: 3px;
+	margin: 1px 15px;
+	background-color: #777;	
+}	
+
+
+
+.btn1:hover, select:hover {
+	box-shadow:1px 1px 3px #222;
+}
+
+.btn1.disabled {
+	box-shadow: none;
+	background-color: #e7e7e7 !important
+}
+
+.input-text {
+	font-family:微软雅黑;
+	font-size: 16px;
+	height: 30px;
+	border: none;
+	padding: 5px 5px 2px 5px;
+	border-bottom: solid 1px #ccc;
+	background-color: #e6e6e6;
+	border-radius: 3px;
+	margin-left:10px;
+}
+
+.checkbox-input {
+	width: 20px;
+	margin-top:10px;
+}
+
+[readonly="readonly"] {
+	border-bottom: none;
+	background-color: #eaeaea;
+}
+
+.update-panel {
+	margin-top: 110px;
+}
+
+.submit-btn {
+	border: none;
+	color: white;
+	border-radius: 5px;
+	font-family: "微软雅黑";
+	line-height: 100%;
+	text-align: center;
+	cursor: pointer;
+	background-color: #b61d1d;
+	background: #7a45e5;
+    background: -moz-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -webkit-gradient(linear,left top,right top,color-stop(20%,#7a45e5),color-stop(80%,#b23cef));
+    background: -webkit-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -o-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -ms-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: linear-gradient(to right,#7a45e5 20%,#b23cef 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7a45e5', endColorstr='#b23cef', GradientType=1);
+	
+}
+
+
+/*admin_jsp.css 开始*/
+
+.large-div {
+	position: relative;
+	padding: 10px;
+}
+
+.header {
+	height: 50px;
+	z-index: 99;
+	box-shadow: 0px 2px 5px #aaa;
+}
+
+.header img {
+	position: relative;
+	bottom: 20px;
+	left: 10px;
+	float: left;
+}
+
+.header div {
+	width: 500px;
+	margin: 0 auto;
+	font-family: 微软雅黑;
+	font-weight: 900;
+	
+	font-size: 40px;
+	letter-spacing: 10px;
+	color: #805ace;
+	
+}
+
+.main-content {
+	position: relative;
+	height: 450px;
+	background-color: #eeeeee;
+}
+
+.menu {
+	position:absolute;
+	top:20px;
+	left:0;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	text-align: center;
+	width: 200px;
+	float: left;
+}
+
+.menu .title {
+	border-bottom: solid #EEEEEE 1px;
+	padding: 4px 0;
+	width: 100%;
+	color: white;
+	background-color: #B1191A;
+	background: #7a45e5;
+    background: -moz-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -webkit-gradient(linear,left top,right top,color-stop(20%,#7a45e5),color-stop(80%,#b23cef));
+    background: -webkit-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -o-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -ms-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: linear-gradient(to right,#7a45e5 20%,#b23cef 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7a45e5', endColorstr='#b23cef', GradientType=1);
+	
+}
+
+
+
+.menu .list-group {
+	display: none;
+}
+
+.menu .show {
+	display: block;
+}
+
+.menu .item {
+	font-size: 16px;
+	padding: 5px;
+	background-color: #f1f1f1;
+}
+
+.menu .item.active {
+	background-color: white;
+}
+
+.menu .item a {
+	color: #7a45e5;
+}
+
+
+.menu .nav>li {
+	border: solid 1px #b23cef;
+}
+
+
+
+.main {
+	top: -20px;
+	position: relative;
+}
+
+.main iframe {
+	position: absolute;
+	width: 1100px;
+	height: 490px;
+	top: 0;
+}
+
+
+/*admin_jsp.css 结束*/
+
+/* addCategory_jsp.css 开始 */		
+		
+		
+.categoryClass-panel {
+		position: relative;
+		padding: 40px;
+		width: 600px;
+		margin: 0 auto;
+}
+
+.categoryClass-panel .categoryClass {
+	
+	padding: 12px;
+}
+
+.categoryClass em {
+	font-weight: 800;
+	color: #b61d1d;
+	margin-right: 10px;
+	white-space: pre-wrap;
+}
+
+
+.categoryClass-panel .div-submit-btn {
+	padding: 30px;
+	text-align: center;
+}
+
+.categoryClass-panel .submit-btn {
+	font-size: 16px;
+	padding: 12px 25px;
+}
+
+.categoryClass-panel .form-validation {
+	position: absolute;
+	height: 30px;
+	width: 300px;	
+	right: 0px;
+	
+}
+
+.categoryClass-panel .form-validation .validation-info{
+		display: none;
+		position: absolute;
+		font-size: 13px;
+		line-height: 24px;
+		bottom: 0px;
+}
+.categoryClass-panel .form-validation .icon{
+	position: absolute;
+	width: 20px;
+	height: 20px;	
+	left: -25px;
+}
+
+
+.categoryClass-panel .form-validation .alert .icon{	
+	background: url(../img/formValidation.png) 0px 0px no-repeat;
+}
+
+.categoryClass-panel .form-validation .fail .icon{	
+	background: url(../img/formValidation.png) -20px 0px no-repeat;
+}
+
+.categoryClass-panel .form-validation .succeed .icon{	
+	background: url(../img/formValidation.png) -40px 0px no-repeat;
+}
+/* addCategory_jsp.css 结束 */
+
+/* categoryMain_jsp.css 开始*/
+
+
+.categoryMain-panel {
+	padding: 30px;
+}
+
+.categoryMain-panel .btn {
+	font-family: 微软雅黑;
+	font-size: 14px;
+	border-radius: 3px;
+	padding: 2px 5px;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.categoryMain-panel .search-bar {
+	height: 50px;
+	width: 460px;
+	text-allign: center;
+	margin: 30px auto;
+}
+
+.categoryMain-panel .search-bar .search-input {
+	height: 35px;
+	width: 350px;
+	border-radius: 3px 0px 0px 3px;
+}
+
+.categoryMain-panel .search-bar .btn {
+	position: relative;
+	right: 8px;
+	bottom: 1px;
+	height: 35px;
+	width: 80px;
+	border-radius: 0px 5px 5px 0px;
+	font-size: 16px;
+	background-color: rgb(177, 25, 26);
+	background: #7a45e5;
+    background: -moz-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -webkit-gradient(linear,left top,right top,color-stop(20%,#7a45e5),color-stop(80%,#b23cef));
+    background: -webkit-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -o-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -ms-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: linear-gradient(to right,#7a45e5 20%,#b23cef 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7a45e5', endColorstr='#b23cef', GradientType=1);
+	
+}
+
+.categoryMain-list {
+	font-family: "微软雅黑";
+}
+
+.categoryMain-li li{
+	
+	width:300px;
+}
+
+.categoryMain-list .title {
+	font-weight: bold;
+	line-height: 10px;
+}
+
+
+.categoryMain-list ul>li {
+	display: inline-block;
+	width: 180px;
+	height: 30px;
+	text-align: center;
+	padding: 3px 5px;
+	margin: 0 auto;
+	line-height: 30px;
+	color: white;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.categoryMain-list .item {
+	font-weight: 100;
+	margin-top: 1px;
+}
+
+
+
+.categoryMain-list .item li {
+	color: #222;
+}
+
+
+
+.categoryMain-list .item .delete-btn {
+	background-color: #5c5251;
+}
+
+.categoryMain-list .item .update-btn {
+	background-color: #0085FA;
+}
+
+.page-controller {
+	position: absolute;
+	right: 260px;
+	bottom: 50px;
+	width:550px;
+	font-family: 微软雅黑;
+}
+
+.page-controller .btn {	
+	font-size: 14px;
+	border-radius: 3px;
+	padding: 8px 15px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	background-color: #777;
+}
+
+.page-controller .btn.disabled {
+	cursor: default;
+	background-color: #ccc;
+}
+
+.page-controller .btn.disabled:hover {
+	box-shadow: none;
+}
+
+
+/* categoryMain_jsp.css 结束 */
+
+.update-panel .categoryMain-list .title {
+	background-color: #5c5251;
+}
+
+.update-panel .categoryMain-list .input-text {
+	width: 80px;
+	padding: 3px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #222;
+	text-align: center;
+	border:none;
+	border-bottom: solid 1px #ccc;
+	background-color: fafafa;
+	
+}
+
+.update-panel .categoryMain-list .item {
+	height: 42px;
+	font-weight: 100;
+	margin-top: 1px;
+	background-color: #fff;
+	color: #222;
+}
+
+.update-panel .categoryMain-list .item .submit-btn {
+	background-color: #37BB2A;
+	padding: 3px 8px;
+}
+
+/* 添加商品图片jsp 开始 */
+
+.product-img-upload-panel {
+	width:700px;
+}
+
+.img-upload-panel {
+	width:300px;
+	float: left;
+	padding: 5px;
+	margin:10px;
+	box-shadow: 2px 2px 5px #888;
+	border-radius: 5px;
+	background-color: #f7f7f7;
+} 
+
+.img-upload-panel .categoryClass {
+	padding: 5px;
+	float: right;
+} 
+
+.input-file {
+	width:220px;
+	background-color: #dee;
+}
+
+.product-img-upload-panel .upload-btn {
+	background-color: #b61d1d;
+}
+
+.product-img-upload-panel .productInfo .categoryClass {
+	display: inline-block;
+}
+
+.product-img-upload-panel .productCartImage-panel {
+	position: relative;
+	top: -90px;
+}
+
+.product-img-upload-panel .div-submit-btn {
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 80px;
+	margin: 0 auto;
+	right: 80px;
+}
+
+
+.productMain-panel ul {
+	table-layout: fixed;
+	text-overflow: ellipsis;
+}
+
+.productMain-panel ul>li {
+	width: 130px;	
+	white-space: nowrap;  
+    overflow: hidden;        
+    text-overflow: ellipsis;
+}
+
+/* putOnShelvesjsp  开始*/
+
+#shelves-btn {
+	font-size: 16px;
+	width: 100%;
+	height: inherit;
+	line-height: 100%;
+}
+
+#shelves-btn.off-shelves-btn {
+	background-color: #009688;
+}
+
+.messageUser {
+	
+	background-color:#5C5251;
+	color:#EEEEEE;
+	font-size:16px;
+	font-weight:700;
+	margin:20px 0px;
+	width:380px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+}
+
+
+
+

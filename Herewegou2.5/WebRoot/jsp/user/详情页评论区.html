@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+			}
+			
+			body {
+				font: 12px/150% Arial, Verdana, "宋体";
+				/*字体大小12px line-height 行高150%*/
+				/*京东 \5b8b\4f53为宋体 可以在线找 unicode 转中文网站翻译一下*/
+			}
+			
+			div {
+				display: block;
+			}
+			
+			div.w {
+				width: 1210px;
+				height: 14897px;
+				/*background-color: yellow;*/
+			}
+			
+			div.aside {
+				width: 210px;
+				height: 3473px;
+				float: left;
+				margin-bottom: 20px;
+				/*background-color: yellowgreen;*/
+			}
+			
+			div.popbox {
+				width: 210px;
+				height: 194px;
+				margin-bottom: 15px;
+				/*//background-color: greenyellow;*/
+			}
+			
+			div.shopName {
+				width: 210px;
+				height: 42px;
+				/*padding: 10px;*/
+				background-color: #f7f7f7;
+				border: 1px solid #eee;
+			}
+			
+			h3 {
+				max-width: 160px;
+				height: 18px;
+				padding: 10px;
+				font-weight: 700;
+				font-size: 14px;
+				font-family: "microsoft yahei";
+				float: left;
+				overflow: hidden;
+				display: block;
+				/*//background-color: lightgoldenrodyellow;*/
+			}
+			
+			a {
+				color: #666666;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			
+			a:hover {
+				color: red;
+			}
+			
+			div.score {
+				width: 210px;
+				height: 152px;
+				/*padding: 0px 10px 10px 10px;*/
+				border: 1px solid #eee;
+				border-top: none;
+				cursor: pointer;
+			}
+			
+			div.scoreForShop {
+				width: 188px;
+				height: 95px;
+				border-bottom: 1px solid #eee;
+			}
+			
+			div.score-sum {
+				float: left;
+				width: 78px;
+				display: inline;
+				margin-top: 15px;
+				color: #999;
+			}
+			
+			span.number {
+				color: #E94634;
+				text-align: center;
+				font-size: 24px;
+				line-height: 45px;
+				color: #E94634;
+				display: block;
+			}
+			
+			div.score-parts {
+				float: left;
+				width: 110px;
+				color: #666666;
+			}
+			
+			div.score-part {
+				overflow: hidden;
+				display: inline-block;
+				margin-bottom: 5px;
+			}
+			
+			span.score-trend.sprite-up {
+				width: 9px;
+				height: 9px;
+				background-image: url(img/__sprite.png);
+				background-position: -19px -34px;
+			}
+			
+			div.btns {
+				padding: 10px 0;
+				font-size: 0;
+				text-align: center;
+			}
+			
+			a.btn2 {
+				width: 88px;
+				height: 34px;
+				line-height: 34px;
+				padding: 0;
+				margin-right: 8px;
+				font-size: 12px;
+				border: 1px solid #ddd;
+				background-color: #f8f8f8;
+				color: #666;
+				display: inline-block;
+				text-align: center;
+				vertical-align: middle;
+				cursor: pointer;
+				text-decoration: none;
+			}
+			
+			i.sprite-enter {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				vertical-align: -2px;
+				background: url(img/__sprite.png) no-repeat;
+				background-position: -34px 0;
+			}
+			
+			i.sprite-follow {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				vertical-align: -2px;
+				background: url(img/__sprite.png) no-repeat;
+				background-position: -34px -16px;
+			}
+			
+			div.search {
+				margin-bottom: 15px;
+				overflow: hidden;
+				display: block;
+			}
+			
+			div.mc {
+				padding: 8px;
+				border: 1px solid #eee;
+				border-top: none;
+				overflow: visible;
+			}
+			
+			p {
+				overflow: hidden;
+				padding: 2px;
+				display: block;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+			}
+			
+			p.item1 input {
+				width: 104px;
+				border: 1px solid #ccc;
+				padding: 2px;
+			}
+			
+			p.item2 input {
+				border: 1px solid #ccc;
+				padding: 2px;
+				width: 3em;
+			}
+			
+			p.item3 input {
+				margin-left: -1px;
+				background: #fff;
+				color: #000;
+				padding: 3px 10px;
+				border-radius: 3px;
+				cursor: pointer;
+				border: 1px solid #ccc;
+			}
+			
+			div.no-padding {
+				margin-top: -1px;
+				border: 1px solid #eee;
+				border-top: none;
+			}
+			
+			div.category {
+				margin-bottom: 15px;
+				width: 210px;
+			}
+			
+			dl {
+				display: block;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+			}
+			
+			dt {
+				border-top: 1px solid #ddd;
+				position: relative;
+				border-bottom: none;
+				display: block;
+			}
+			
+			dt a {
+				padding-left: 36px;
+				background: #f7f7f7;
+				display: block;
+				height: 28px;
+				line-height: 28px;
+				text-decoration: none;
+			}
+			
+			s {
+				display: block;
+				position: absolute;
+				left: 10px;
+				top: 6px;
+				width: 16px;
+				height: 16px;
+				cursor: pointer;
+			}
+			
+			s.picture1 {
+				background: url(img/20130603A.png) no-repeat;
+				background-position: -20px 0;
+			}
+			
+			s.picture2 {
+				background: url(img/20130603A.png) no-repeat;
+				background-position: -37px 0;
+			}
+			
+			dl a {
+				display: block;
+				height: 28px;
+				line-height: 28px;
+				text-decoration: none;
+			}
+			
+			dd {
+				/*display: none;*/
+				-webkit-margin-start: 40px;
+			}
+			
+			div.hideDiv1 {
+				display: none;
+			}
+			div.hideDiv2 {
+				display: none;
+			}
+			
+			dd a {
+				padding-left: 37px;
+				height: 26px;
+				line-height: 26px;
+				white-space: nowrap;
+				display: block;
+			}
+			/*右边一栏*/
+			
+			div.detail {
+				width: 990px;
+				min-height: 220px;
+				float: right;
+				display: inline;
+				overflow: hidden;
+				/*background-color: yellow;*/
+			}
+			
+			div.tabMain {
+				background-color: #f7f7f7;
+				border: 1px solid #eee;
+				border-bottom: 1px solid #e4393c;
+				display: block;
+				position: relative;
+				overflow: visible;
+				z-index: 2;
+			}
+			
+			div.tabMain ul {
+				margin-top: -1px;
+				display: block;
+				list-style-type: disc;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+			
+			div.tabMain li.selected {
+				background-color: #e4393c;
+				color: #fff;
+				cursor: default;
+				padding: 10px 25px;
+				font-size: 14px;
+				position: relative;
+				display: inline-block;
+				font-family: "microsoft yahei";
+				text-align: -webkit-match-parent;
+			}
+			
+			div.tabMain li {
+			
+				padding: 10px 25px;
+				font-size: 14px;
+				position: relative;
+				display: inline-block;
+				font-family: "microsoft yahei";
+				text-align: -webkit-match-parent;
+				cursor: pointer;
+			}
+			
+			div.extra {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: block;
+			}
+			
+			div.buy {
+				float: left;
+				margin-right: 10px;
+				padding-top: 8px;
+			}
+			
+			div.inner {
+				line-height: 23px;
+				float: left;
+				z-index: 1;
+				padding: 1px 1px 0;
+				cursor: pointer;
+				position: relative;
+			}
+			
+			span.icon-qr {
+				margin-left: 10px;
+				width: 16px;
+				height: 16px;
+				overflow: hidden;
+				line-height: 1000px;
+				background: url(img/qr-thumb.png) no-repeat;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			
+			span.text {
+				margin-left: 5px;
+			}
+			
+			span.arr-close {
+				display: inline-block;
+				vertical-align: middle;
+				width: 13px;
+				height: 7px;
+				margin: 0 10px 0 5px;
+				background: url(img/arr-close.png) no-repeat;
+			}
+			
+			div.shopCar {
+				display: block;
+				float: right;
+				margin-right: 10px;
+				padding-top: 8px;
+				position: relative;
+			}
+			
+			div.head {
+				height: 23px;
+				line-height: 23px;
+				float: left;
+				z-index: 1;
+				padding: 1px 1px 0;
+				cursor: pointer;
+				position: relative;
+			}
+			
+			a.btn-primary {
+				height: 28px;
+				line-height: 28px;
+				padding: 0 16px;
+				background-color: #df3033;
+				color: #fff;
+				display: inline-block;
+				text-align: center;
+				vertical-align: middle;
+				cursor: pointer;
+				text-decoration: none;
+			}
+			
+			div.tabCon {
+				overflow: hidden;
+				padding: 10px 0;
+				display: block;
+			}
+			
+			div.parameter {
+				padding: 0 10px 10px;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #eee;
+			}
+			
+			div.hide {
+				display: none;
+				background-color: yellow;
+			}
+			
+			ul.parameter1-list {
+				padding: 20px 0 15px;
+				overflow: hidden;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+			
+			ul.parameter-list {
+				padding-bottom: 0;
+				padding: 20px 0 15px;
+				overflow: hidden;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+			
+			ul.parameter2-list {
+				padding: 20px 0 15px;
+				overflow: hidden;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+			
+			li.fore0 {
+				width: 200px;
+				padding-left: 42px;
+				float: left;
+				margin-bottom: 5px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: list-item;
+				text-align: -webkit-match-parent;
+			}
+			
+			i.i-phone {
+				height: 31px;
+				background: url(img/param1.png) no-repeat;
+				float: left;
+				width: 33px;
+				height: 33px;
+				overflow: hidden;
+				line-height: 1000px;
+				margin-top: 2px;
+				margin-left: -37px;
+				background-position: 0 0;
+				white-space: nowrap;
+			}
+			
+			i.i-camera {
+				float: left;
+				width: 33px;
+				height: 33px;
+				overflow: hidden;
+				line-height: 1000px;
+				margin-top: 2px;
+				margin-left: -37px;
+				background: url(img/param2.png) no-repeat;
+				background-position: 0 0;
+			}
+			
+			i.i-cpu {
+				float: left;
+				width: 33px;
+				height: 33px;
+				overflow: hidden;
+				line-height: 1000px;
+				margin-top: 2px;
+				margin-left: -37px;
+				background: url(img/param3.png)no-repeat;
+				background-position: 0 0;
+			}
+			
+			li.fDetail {
+				width: 197px;
+				min-height: 0px;
+				float: right;
+				display: inline;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			
+			p.fenBianLv {
+				width: 100%;
+				line-height: 18px;
+				margin-bottom: 4px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			
+			a.btn-def {
+				color: #666;
+				margin-left: 5px;
+				border: 1px solid #ddd;
+				background-color: #f8f8f8;
+				height: 23px;
+				line-height: 23px;
+				padding: 0 10px;
+				display: inline-block;
+				text-align: center;
+				vertical-align: middle;
+				cursor: pointer;
+			}
+			
+			div.parameter ul li {
+				width: 200px;
+				padding-left: 42px;
+				float: left;
+				margin-bottom: 5px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: list-item;
+				text-align: -webkit-match-parent;
+			}
+			
+			p.more-par {
+				padding-right: 20px;
+				margin-top: -5px;
+				text-align: right;
+			}
+		</style>
+		<script src="js/jquery-3.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//给所有的li绑定单击事件
+				var $tabMain_li = $("div.tabMain li");
+				$tabMain_li.click(function() {
+					//将点击的li高亮
+					$(this).addClass("selected");
+					//去掉其他的高亮
+					$(this).siblings().removeClass("selected");
+					//让对应的div显示
+					//首先获得点击的第几个li
+					var checkedLiIndex = $tabMain_li.index($(this));
+					$("div.tabCon>div").eq(checkedLiIndex).show();
+					$("div.tabCon>div").eq(checkedLiIndex).siblings().hide();
+				});
+				///*左下角店内分类*/
+				var $s1 = $("#s1");
+				var $div1 = $("div.hideDiv1");
+				$s1.toggle(
+
+					function() {
+						$(this).removeClass("picture1");
+						$(this).addClass("picture2");
+
+						$div1.show();
+					},
+					function() {
+						$(this).removeClass("picture2");
+						$(this).addClass("picture1");
+						$div1.hide();
+
+					}
+				);
+				var $s2 = $("#s2");
+				var $div2 = $("div.hideDiv2");
+				$s2.toggle(
+
+					function() {
+						$(this).removeClass("picture1");
+						$(this).addClass("picture2");
+
+						$div2.show();
+					},
+					function() {
+						$(this).removeClass("picture2");
+						$(this).addClass("picture1");
+						$div2.hide();
+
+					}
+				);
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="w">
+			<div class="aside">
+				<!--左上角的店铺信息-->
+				<div id="popbox" class="popbox">
+					<div class="shopName">
+						<h3><a href="">vivo官方旗舰店</a></h3>
+					</div>
+					<div class="score">
+
+						<div class="scoreForShop">
+							<a href="">
+								<div class="score-sum">
+									<span class="number">9.75</span>
+								</div>
+
+								<div class="score-parts">
+									<div class="score-part">
+										<span class="score-desc">商品评价</span>
+										<span class="score-detail"><em title="9.76分" class="number">9.76</em></span>
+										<span class="score-trend"><i class="sprite-up"></i></span>
+									</div>
+									<div class="score-part">
+										<span class="score-desc">服务态度</span>
+										<span class="score-detail"><em title="9.68分" class="number">9.68</em></span>
+									</div>
+									<div class="score-part">
+										<span class="score-desc">物流速度</span>
+										<span class="score-detail"><em title="9.76分" class="number">9.76</em></span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="btns">
+							<a class="btn2" href=""><i class="sprite-enter"></i><span>进店逛逛</span></a>
+							<a class="btn2" href=""><i class="sprite-follow"></i><span>关注店铺</span></a>
+						</div>
+					</div>
+				</div>
+				<div id="search" class="search">
+					<div class="shopName">
+						<h3>店内搜索</h3>
+					</div>
+					<div class="mc">
+						<p class="item1"><label for="keyword">关键字：</label><span><input type="text" id="keyword" ></span></p>
+						<p class="item2"><label for="price">价　格：</label><span><input type="text" id="price"> 到 <input type="text" id="price1""></span></p>
+						<p class="item3"><label for="">　　　</label><span><input type="submit" value="搜索" id="btnShopSearch"></span></p>
+					</div>
+				</div>
+
+				<div id="category" class="category">
+					<div class="shopName">
+						<h3>店内分类</h3>
+					</div>
+					<div class="no-padding">
+						<dl class="divdl">
+							<dt class=""><s class="picture1" id="s1"></s><a href="#" >手机专区</a></dt>
+							<div class="hideDiv1">
+								<dd>
+									<a href="#">X系列</a>
+								</dd>
+								<dd>
+									<a href="#">Y系列</a>
+								</dd>
+								<dd>
+									<a href="#">V系列</a>
+								</dd>
+								<dd>
+									<a href="#">Xplay系列</a>
+								</dd>
+								<dd>
+									<a href="#">Xshot系列</a>
+								</dd>
+							</div>
+
+						</dl>
+						<dl class="divdl">
+							<dt class=""><s class="picture1" id="s2"></s><a href="#">网络制式</a></dt>
+							<div class="hideDiv2">
+								<dd>
+									<a href="#">移动4G</a>
+								</dd>
+								<dd>
+									<a href="#">联通4G</a>
+								</dd>
+								<dd>
+									<a href="#">电信4G</a>
+								</dd>
+								<dd>
+									<a href="#">移动联通4G</a>
+								</dd>
+								<dd>
+									<a href="#">移动联通电信4G</a>
+								</dd>
+							</div>
+
+						</dl>
+						<dl class=" sp-single">
+							<dt class="open"><s class="picture1"></s><a href="#">配件专区</a></dt>
+						</dl>
+					</div>
+				</div>
+
+			</div>
+			<div class="detail">
+				<div id="detail" class="ETab">
+					<div class="tabMain">
+						<ul>
+							<li class="selected">商品介绍</li>
+							<li>规格与包装</li>
+							<li>售后保障</li>
+							<li>商品评价(18787)</li>
+							<li>手机社区 <sup>new<b>◤</b></sup> </li>
+						</ul>
+						<div class="extra">
+							<div class="buy">
+								<div class="inner">
+									<span class="icon-qr"></span>
+									<span class="text">扫一扫下单</span>
+									<span class="arr-close"></span>
+								</div>
+								
+							</div>
+							<div class="shopCar">
+								<div class="inner">
+									<div class="head">
+										<a class="btn-primary" href="">加入购物车</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tabCon">
+						<div class="parameter">
+							<ul class="parameter1-list">
+								<li class="fore0">
+									<i class="i-phone"></i>
+									<div class="fDetail">
+										<p class="fenBianLv">分辨率：1920*1080(FHD)</p>
+									</div>
+								</li>
+								<li class="fore0">
+									<i class="i-camera"></i>
+									<div class="fDetail">
+										<p>后置摄像头：1300万像素</p>
+										<p>前置摄像头：1600万像素</p>
+									</div>
+								</li>
+								<li class="fore0">
+									<i class="i-cpu"></i>
+									<div class="fDetail">
+										<p>核&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：八核</p>
+									</div>
+								</li>
+
+							</ul>
+							<ul id="parameter-brand" class="parameter-list">
+								<li title="vivo">品牌：
+									<a href="#" target="_blank">vivo</a>
+									<a href="#" class="btn-def"><b>♥</b>关注</a>
+								</li>
+							</ul>
+							<ul class=" parameter2-list">
+								<li>商品名称：vivo X7 全网通 4GB+64GB 移动联通电信4G手机 双卡双待 金色</li>
+								<li>商品编号：10429992152</li>
+								<li>店铺：
+									<a href="#" target="_blank">vivo官方旗舰店</a>
+								</li>
+								<li>商品毛重：0.55kg</li>
+								<li>系统：安卓（Android）</li>
+								<li>运行内存：4GB</li>
+								<li>购买方式：其他</li>
+								<li>热点：骁龙芯片，双卡双待，指纹识别，金属机身，拍照神器</li>
+								<li>像素：1000-1600万</li>
+								<li>机身内存：64GB</li>
+								<li>机身颜色：金色</li>
+							</ul>
+							<p class="more-par">
+								<a href="#" class="J-more-param">更多参数</a>
+							</p>
+							<div id="img" class="img">
+								<img src="img/1.jpg" width="990" height="665">
+							</div>
+						</div>
+						<div class="hide" id="guiGe">规格与包装</div>
+						<div class="hide" id="shouHou">售后</div>
+						<div class="hide" id="pingJia">商品评价</div>
+						<div class="hide" id="sheQu">手机社区</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

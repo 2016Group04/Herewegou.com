@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>京东购物车页面</title>
+		<style type="text/css">
+		
+			body {
+				color: #666;
+				font: 12px/150% Arial, Verdana, "宋体";
+			}
+		
+			.m,
+			.mb,
+			.mc,
+			.mt,
+			.p-detail,
+			.p-img,
+			.p-market,
+			.p-name,
+			.p-price,
+			.sm,
+			.smb,
+			.smc,
+			.smt {
+				overflow: hidden;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+		
+			em,
+			i,
+			u {
+				font-style: normal;
+			}
+			
+			
+			ol,
+			ul {
+				list-style: outside none none;
+			}
+			
+		
+			.clearfix::after {
+				clear: both;
+				content: ".";
+				display: block;
+				height: 0;
+				visibility: hidden;
+			}
+			
+			.header {
+				padding: 15px 0 10px;
+			}
+			
+			.w {
+				margin: 0 auto;
+				width: 990px;
+			}
+			
+
+			#logo .link2 b {
+				background: #fff url("//misc.360buyimg.com/user/cart/widget/header-2015/i/cart-icon.png") no-repeat scroll 0 0;
+				display: block;
+				height: 40px;
+				line-height: 99em;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 100px;
+			}
+			
+			.l-tip,
+			.nologin-tip {
+				background: #fffdee none repeat scroll 0 0;
+				border: 1px solid #edd28b;
+				color: #f70;
+				line-height: 25px;
+				margin-bottom: 20px;
+				padding: 10px 20px;
+			}
+			
+			.btn-1 {
+				background-color: #e74649;
+				background-image: linear-gradient(to top, #e74649 0px, #df3134 100%);
+				border: 0 none;
+				border-radius: 3px;
+				color: #fff;
+				cursor: pointer;
+				display: inline-block;
+				float: none;
+				font-family: arial, "Microsoft YaHei";
+				font-size: 12px;
+				font-weight: 400;
+				height: 25px;
+				line-height: 25px;
+				padding: 0 10px;
+				transition: all 0.2s ease-out 0s;
+				vertical-align: middle;
+			}
+			
+			.ml10 {
+				margin-left: 10px;
+			}
+			
+			a {
+				color: #666;
+				text-decoration: none;
+			}
+			
+			.l-tip .wicon,
+			.nologin-tip .wicon {
+				background: rgba(0, 0, 0, 0) url("//misc.360buyimg.com/user/cart/css/i/icon16.png") no-repeat scroll 0 0;
+				display: inline-block;
+				height: 16px;
+				margin-right: 10px;
+				overflow: hidden;
+				vertical-align: middle;
+				width: 16px;
+			}
+			
+			.cart-filter-bar {
+				margin-top: 10px;
+			}
+			
+			
+						
+			
+			.cart-filter-bar .switch-cart li.curr,
+			.cart-filter-bar .switch-cart li.curr a {
+				color: #e4393c;
+			}
+			
+			.cart-filter-bar .switch-cart li a {
+				color: #333;
+			}
+			
+					
+			
+			.cart-filter-bar .switch-cart li.curr,
+			.cart-filter-bar .switch-cart li.curr a {
+				color: #e4393c;
+			}
+			
+			.cart-filter-bar .switch-cart li a {
+				color: #333;
+			}
+			
+			
+			.cart-filter-bar .switch-cart li.curr,
+			.cart-filter-bar .switch-cart li.curr a {
+				color: #e4393c;
+			}
+			
+			.cart-filter-bar .switch-cart li {
+			    float: left;
+			    position: relative;
+			    font-weight: 700;
+			    font-size: 16px;
+			    height: 26px;
+			    line-height: 26px;
+			    text-align: center;
+			    padding: 0 0 10px;
+			    cursor: pointer;
+			    margin: 5px 30px 0 0;
+			}
+			
+			
+			.cart-main .cart-thead::after {
+				clear: both;
+				content: ".";
+				display: block;
+				height: 0;
+				visibility: hidden;
+			}
+			
+			.cart-main .cart-thead {
+				-moz-border-bottom-colors: none;
+				-moz-border-left-colors: none;
+				-moz-border-right-colors: none;
+				-moz-border-top-colors: none;
+				background: #f3f3f3 none repeat scroll 0 0;
+				border-color: -moz-use-text-color #e9e9e9 #e9e9e9;
+				border-image: none;
+				border-style: none solid solid;
+				border-width: 0 1px 1px;
+				display: block;
+				height: 32px;
+				line-height: 32px;
+				margin: 0 0 10px;
+				padding: 5px 0;
+			}
+			
+			
+			
+			.cart-main .cart-thead .t-checkbox {
+				height: 18px;
+				line-height: 18px;
+				padding-left: 11px;
+				padding-top: 7px;
+				width: 122px;
+			}
+			
+			.cart-main .cart-thead .column {
+				float: left;
+			}
+			
+			.cart-main .cart-thead {
+				line-height: 32px;
+			}
+			
+			
+			
+			#logo .link2 b {
+				background: #fff url("//misc.360buyimg.com/user/cart/widget/header-2015/i/cart-icon.png") no-repeat scroll 0 0;
+				display: block;
+				height: 40px;
+				line-height: 99em;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 100px;
+			}
+			
+			.cart-store .label {
+				float: left;
+				line-height: 26px;
+			}
+			
+			.cart-tbody .shop .shop-name {
+				display: inline-block;
+				height: 30px;
+				line-height: 30px;
+				max-width: 144px;
+				overflow: hidden;
+				vertical-align: middle;
+			}
+			
+			
+
+			.cart-tbody .shop {
+				font-weight: 700;
+				line-height: 30px;
+			}
+			
+			.cart-main .cart-thead::after {
+				clear: both;
+				content: ".";
+				display: block;
+				height: 0;
+				visibility: hidden;
+			}
+			
+			.cart-main .cart-thead {
+				-moz-border-bottom-colors: none;
+				-moz-border-left-colors: none;
+				-moz-border-right-colors: none;
+				-moz-border-top-colors: none;
+				background: #f3f3f3 none repeat scroll 0 0;
+				border-color: -moz-use-text-color #e9e9e9 #e9e9e9;
+				border-image: none;
+				border-style: none solid solid;
+				border-width: 0 1px 1px;
+				display: block;
+				height: 32px;
+				line-height: 32px;
+				margin: 0 0 10px;
+				padding: 5px 0;
+			}
+			
+			
+			.cart-tbody .shop {
+				font-weight: 700;
+				height: 30px;
+				line-height: 30px;
+				padding-left: 11px;
+			}
+			
+		
+			
+			.item-list .item-full:first-child,
+			.item-list .item-single:first-child,
+			.item-list .item-suit:first-child {
+				border-top: 0 none;
+			}
+			
+			.cart-tbody .item-selected,
+			.cart-tbody .item-selected .single-header {
+				background: #fff4e8 none repeat scroll 0 0;
+			}
+			
+			.cart-tbody .item-item {
+				background: #fff none repeat scroll 0 0;
+				border-top: 1px solid #c5c5c5;
+				line-height: 20px;
+				padding: 0 10px 1px 40px;
+				position: relative;
+			}
+			
+			.cart-tbody .item-full,
+			.cart-tbody .item-single,
+			.cart-tbody .item-suit {
+				border-top: 1px solid #ccc;
+			}
+			
+		
+			
+			element.style {
+				height: 50px;
+				width: 988px;
+			}
+			
+			.cart-toolbar {
+				background: #fff none repeat scroll 0 0;
+				border: 1px solid #f0f0f0;
+				height: 50px;
+				position: relative;
+			}
+			
+			
+			
+			.toolbar-wrap .select-all {
+				float: left;
+				height: 18px;
+				line-height: 18px;
+				padding: 16px 0 16px 9px;
+				white-space: nowrap;
+			}
+			
+			.toolbar-wrap .operation a {
+				color: #666;
+				float: left;
+				margin-left: 20px;
+			}
+			
+		
+
+			.toolbar-wrap .operation {
+				line-height: 50px;
+			}
+			
+			.toolbar-wrap .amount-sum {
+				color: #999;
+				cursor: pointer;
+				float: right;
+				height: 44px;
+				line-height: 20px;
+				margin: 7px 0 0;
+			}
+		
+			.toolbar-wrap .price-sum div {
+				white-space: nowrap;
+			}
+			
+			.toolbar-wrap .price-sum {
+				color: #666;
+				line-height: 20px;
+			}
+			
+			.toolbar-wrap .price-sum div {
+				white-space: nowrap;
+			}
+			
+			.toolbar-wrap .btn-area .common-submit-btn b,
+			.toolbar-wrap .btn-area .jdInt-submit-btn b,
+			.toolbar-wrap .btn-area .submit-btn b {
+				background: rgba(0, 0, 0, 0) url("//misc.360buyimg.com/user/cart/css/i/cart-submit-btn-new.png") no-repeat scroll 0 0;
+				display: block;
+				height: 52px;
+				left: 0;
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				width: 96px;
+			}
+			
+			.toolbar-wrap .btn-area .common-submit-btn,
+			.toolbar-wrap .btn-area .jdInt-submit-btn,
+			.toolbar-wrap .btn-area .submit-btn {
+				color: #fff;
+				font-family: "Microsoft YaHei";
+				font-size: 18px;
+				line-height: 52px;
+				text-align: center;
+			}
+		
+			
+			img {
+				border: 0 none;
+				vertical-align: middle;
+			}
+			
+			.cart-tbody .item-item .goods-item .p-name {
+				height: 40px;
+				line-height: 20px;
+				overflow: hidden;
+			}
+			
+			#logo {
+			    padding-left: 5px;
+			    float: left;
+			    position: relative;
+			    width: 270px;
+			}
+			
+			.cart-search {
+			    float: right;
+			    border: 2px solid #c91623;
+			    background: #c91623;
+			    height: 24px;
+			    margin-top: 20px;
+			    overflow: hidden;
+			}
+
+
+			.cart-search .itxt {
+			    border: 0;
+			    height: 18px;
+			    line-height: 18px;
+			    width: 260px;
+			    padding: 3px 5px;
+			}
+			
+			.cart-search .button {
+			    display: inline-block;
+			    vertical-align: top;
+			    width: 48px;
+			    height: 24px;
+			    background: #c91623;
+			    text-align: center;
+			    color: #fff;
+			    font-weight: 700;
+			    -webkit-appearance: none;
+			    margin: 0;
+			    padding: 0;
+			    border: 0;
+			}
+			
+			.cart-filter-bar .switch-cart {
+			    float: left;
+			    position: relative;
+			    height: 26px;
+			    overflow: hidden;
+			}
+			
+			.cart-store {
+			    position: relative;
+			    z-index: 5;
+			    display: inline-block;
+			    display: block;
+			    margin-bottom: 10px;
+			    padding-left: 122px;
+			}
+			
+			.cart-filter-bar .cart-store {
+			    float: right;
+			}
+			
+			.clear, .clr {
+			    display: block;
+			    overflow: hidden;
+			    clear: both;
+			    height: 0;
+			    line-height: 0;
+			    font-size: 0;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="w w1 header clearfix">
+			<div id="logo">
+				<a class="link1" href="index.jsp">
+					<img alt="京东商城" src="img/logo-2014.png">
+				</a>
+				<a class="link2" href="#none">
+					<b></b>
+				</a>
+			</div>
+			<div class="cart-search">
+				<div class="form">
+					<input id="key" class="itxt" type="text" accesskey="s" autocomplete="off" style="color: rgb(153, 153, 153);">
+					<input class="button" type="button" onclick="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_search" value="搜索">
+				</div>
+			</div>
+		</div>
+
+		<div id="container" class="cart">
+			<div class="w">
+				<div id="chunjie" class="mb10"></div>
+				<div class="nologin-tip">
+					<span class="wicon"></span> 您还没有登录！登录后购物车的商品将保存到您账号中
+					<a class="btn-1 ml10" href="#none">立即登录</a>
+				</div>
+				<div class="cart-filter-bar">
+					<ul class="switch-cart">
+						<li class="switch-cart-item curr">
+							<a href="#none">
+								<em>全部商品</em>
+								<span class="number">1</span>
+							</a>
+						</li>
+					</ul>
+					<div class="cart-store">
+						<input id="hiddenLocationId" type="hidden">
+						<input id="hiddenLocation" type="hidden">
+						<span class="label">配送至：</span>
+					</div>
+					<div class="clr"></div>
+					<div class="w-line">
+						<div class="floater" style="width: 82px; left: 0px;"></div>
+					</div>
+					<div class="tab-con ui-switchable-panel-selected" style="display: block;"></div>
+					<div class="tab-con hide" style="display: none;"></div>
+				</div>
+			</div>
+
+			<div class="cart-warp">
+				<div class="w">
+					<div id="jd-cart">
+						<div class="cart-main cart-main-new">
+							<div class="cart-thead">
+								<div class="column t-checkbox">
+									<div class="cart-checkbox">
+										<input id="toggle-checkboxes_up" class="jdcheckbox" type="checkbox" clstag="clickcart|keycount|xincart|cart_allCheck" name="toggle-checkboxes" checked="checked">
+										<label class="checked" for="">勾选全部商品</label>
+									</div>
+									全选
+								</div>
+								<div class="column t-goods">商品</div>
+								<div class="column t-props"></div>
+								<div class="column t-price">单价(元)</div>
+								<div class="column t-quantity">数量</div>
+								<div class="column t-sum">小计(元)</div>
+								<div class="column t-action">操作</div>
+							</div>
+							<div id="cart-list">
+								<input id="allSkuIds" type="hidden" value="10429992152">
+								<input id="outSkus" type="hidden" value="">
+								<input id="isLogin" type="hidden" value="0">
+								<input id="isNoSearchStockState" type="hidden" value="0">
+								<input id="isNoDD" type="hidden" value="0">
+								<input id="isNoCoupon" type="hidden" value="0">
+								<input id="isFavoriteDowngrade" type="hidden" value="0">
+								<input id="isPriceNoticeDowngrade" type="hidden" value="0">
+								<input id="isNoZYCoupon" type="hidden" value="0">
+								<input id="isNoVenderFreight" type="hidden" value="0">
+								<input id="hiddenLocationId" type="hidden">
+								<input id="hiddenLocation" type="hidden">
+								<input id="ids" type="hidden" value="10429992152">
+								<input id="isNgsdg" type="hidden" value="0">
+								<input id="changeBeforeValue" type="hidden" value="">
+								<input id="changeBeforeId" type="hidden" value="">
+								<input id="checkedCartState" type="hidden" value="1">
+								<input id="venderIds" type="hidden" value="86412">
+								<input id="zySkuCid" type="hidden" value="">
+								<input id="venderFreightIds" type="hidden" value="86412">
+								<input id="venderTotals" type="hidden" value="2498.00">
+								<input id="uclass" type="hidden" value="0">
+								<div id="cart-item-list-01" class="cart-item-list">
+									<div id="vender_86412" class="cart-tbody">
+										<div class="shop">
+											<div class="cart-checkbox">
+												<input class="jdcheckbox" type="checkbox" clstag="clickcart|keycount|xincart|cart_checkOn_shop" name="checkShop" checked="checked">
+												<label for="">勾选店铺内全部商品</label>
+											</div>
+											<span class="shop-txt">
+<a id="venderId_86412" class="shop-name" clstag="clickcart|keycount|xincart|cart_shopName" target="_blank" href="http://vivo.jd.com" shopid="85034">vivo官方旗舰店</a>
+<a class="btn-im" clstag="pageclick|keycount|cart__201503041|4" href="javascript:;" _vid="86412">联系客服</a>
+</span>
+											<span class="shop-coupon" name="J_vendershop_86412">
+<a id="coupon_86412" class="shop-coupon-btn" clstag="pageclick|keycount|201508251|7" href="javascript:;">优惠券</a>
+</span>
+											<div id="shop-extra-r_86412" class="shop-extra-r" checkedskuids="10429992152" totalprice="2498.00" venderid="86412"></div>
+										</div>
+										<div class="item-list">
+											<div id="product_10429992152" class="item-single item-item item-selected ">
+												<div class="item-form">
+													<div class="cell p-checkbox">
+														<div class="cart-checkbox">
+															<input class="jdcheckbox" type="checkbox" clstag="clickcart|keycount|xincart|cart_checkOn_sku" data-bind="cbid" checked="checked" value="10429992152_1" name="checkItem" p-type="10429992152_1">
+															<label class="checked" for="">勾选商品</label>
+															<span class="line-circle"></span>
+														</div>
+													</div>
+													<div class="cell p-goods">
+														<div class="goods-item">
+															<div class="p-img">
+																<a class="J_zyyhq_10429992152" target="_blank" href="//item.jd.com/10429992152.html">
+																	<img src="//img10.360buyimg.com/cms/s80x80_jfs/t2755/258/2923249158/682341/f39c29bf/577b554bN0f417f78.png" clstag="clickcart|keycount|xincart|cart_sku_pic" alt="vivo X7 全网通 4GB+64GB 移动联通电信4G手机 双卡双待 金色">
+																</a>
+															</div>
+															<div class="item-msg">
+																<div class="p-name">
+																	<a target="_blank" href="//item.jd.com/10429992152.html" clstag="clickcart|keycount|xincart|cart_sku_name">vivo X7 全网通 4GB+64GB 移动联通电信4G手机 双卡双待 金色</a>
+																</div>
+																<div class="p-extend">
+																	<span class="promise" _giftcard="giftcard_10429992152"> </span>
+																	<span class="promise" _yanbao="yanbao_10429992152_">
+<i class="jd-service-icon"></i>
+<a class="ftx-03 jd-service" href="#none" data-tips="购买增值保障">购买增值保障</a>
+</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cell p-props p-props-new">
+														<div class="props-txt" title="金色">颜色：金色</div>
+													</div>
+													<div class="cell p-price">
+														<strong>2498.00</strong>
+													</div>
+													<div class="cell p-quantity">
+														<div class="quantity-form">
+															<a id="decrement_86412_10429992152_1_1" class="decrement disabled" clstag="clickcart|keycount|xincart|cart_num_down" href="javascript:void(0);">-</a>
+															<input id="changeQuantity_86412_10429992152_1_1_0" class="itxt" type="text" value="1" autocomplete="off">
+															<a id="increment_86412_10429992152_1_1_0" class="increment" clstag="clickcart|keycount|xincart|cart_num_up" href="javascript:void(0);">+</a>
+														</div>
+														<div class="ac ftx-03 quantity-txt" _stock="stock_10429992152">有货</div>
+													</div>
+													<div class="cell p-sum">
+														<strong>2498.00</strong>
+													</div>
+													<div class="cell p-ops">
+														<a id="remove_86412_10429992152_1" class="cart-remove" href="javascript:void(0);" data-more="removed_2498.00_1" data-name="vivo X7 全网通 4GB+64GB 移动联通电信4G..." clstag="clickcart|keycount|xincart|cart_sku_del">删除</a>
+														<a id="follow_86412_10429992152_1" class="cart-follow" clstag="clickcart|keycount|xincart|cart_sku_guanzhu" href="javascript:void(0);">移到我的关注</a>
+													</div>
+												</div>
+												<div class="item-extra">
+													<div class="gift-items">
+														<div class="gift-item ">
+															<a class="gift-info" title="vivo原装移动电源P50 5000mAh 银白色" target="_blank" href="//item.jd.com/1752793703.html"> 【赠品】vivo原装移动电源P50 5000mAh 银白色 </a>
+															<span class="num"> X1 </span>
+															<span class="gift-stock-state"></span>
+														</div>
+														<div class="gift-item ">
+															<a class="gift-info" title="蓝牙自拍杆【赠品】 颜色随机" target="_blank" href="//item.jd.com/1547997557.html"> 【赠品】蓝牙自拍杆【赠品】 颜色随机 </a>
+															<span class="num"> X1 </span>
+															<span class="gift-stock-state"></span>
+														</div>
+													</div>
+												</div>
+												<div class="item-line"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="cart-floatbar">
+						<div class="ui-ceilinglamp-1" style="width: 990px; height: 52px;">
+							<div class="cart-toolbar" style="width: 988px; height: 50px;">
+								<div class="toolbar-wrap">
+									<div class="selected-item-list hide" style="display: none;"> </div>
+									<div class="options-box">
+										<div class="select-all">
+											<div class="cart-checkbox">
+												<input id="toggle-checkboxes_down" class="jdcheckbox" type="checkbox" clstag="clickcart|keycount|xincart|cart_allCheckDown" name="toggle-checkboxes" checked="checked">
+												<label class="checked" for="">勾选全部商品</label>
+											</div>
+											全选
+										</div>
+										<div class="operation">
+											<a class="remove-batch" clstag="clickcart|keycount|xincart|cart_somesku_del" href="#none">删除选中的商品</a>
+											<a class="follow-batch" clstag="clickcart|keycount|xincart|cart_somesku_guanzhu" href="#none">移到我的关注</a>
+											<a class="J_clr_nosale" clstag="pageclick|keycount|201508251|23" href="#none">清除下柜商品</a>
+										</div>
+										<div class="clr"></div>
+										<div class="toolbar-right">
+											<div class="normal">
+												<div class="comm-right">
+													<div class="btn-area">
+														<a class="submit-btn" clstag="clickcart|keycount|xincart|cart_gotoOrder" onclick="return false;" href="javascript:void(0);" data-bind="1">
+															去结算
+															<b></b>
+														</a>
+													</div>
+													<div class="price-sum">
+														<div>
+															<span class="txt">总价（不含运费）：</span>
+															<span class="price sumPrice">
+<em>￥2498.00</em>
+</span>
+															<br>
+															<span class="txt">已节省：</span>
+															<span class="price totalRePrice">-￥0.00</span>
+														</div>
+													</div>
+													<div class="amount-sum">
+														已选择
+														<em>1</em> 件商品
+														<b class="up" clstag="clickcart|keycount|xincart|cart_thumbnailOpen"></b>
+													</div>
+													<div class="clr"></div>
+												</div>
+											</div>
+											<div class="combine" style="display: none;">
+												<div class="comm-right">
+													<div class="btn-area">
+														<a class="jdInt-submit-btn" clstag="clickcart|keycount|xincart|cart_gotoOrderOut" onclick="return false;" href="javascript:void(0);">
+															去全球购结算
+															<b></b>
+														</a>
+														<a class="common-submit-btn" clstag="clickcart|keycount|xincart|cart_gotoOrder" onclick="return false;" href="javascript:void(0);">
+															去京东结算
+															<b></b>
+														</a>
+													</div>
+													<div class="price-sum">
+														<div>
+															<span class="txt">总价（不含运费）：</span>
+															<span class="price sumPrice">
+<em>￥2498.00</em>
+</span>
+															<br>
+															<span class="txt">已节省：</span>
+															<span class="price totalRePrice">-￥0.00</span>
+														</div>
+													</div>
+													<div class="amount-sum">
+														已选择
+														<em>1</em> 件商品
+														<b class="up"></b>
+													</div>
+													<div class="clr"></div>
+												</div>
+												<div class="clr"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cart-removed">
+						<div class="r-tit">已删除商品，您可以重新购买或加关注：</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

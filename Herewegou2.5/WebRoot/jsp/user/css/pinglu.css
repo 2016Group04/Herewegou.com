@@ -1,0 +1,552 @@
+
+			* {
+				margin: 0px;
+			}
+			
+			body {
+				font: 12px/150% Arial, Verdana, "宋体";
+				/*字体大小12px line-height 行高150%*/
+				/*京东 \5b8b\4f53为宋体 可以在线找 unicode 转中文网站翻译一下*/
+			}
+			
+			div {
+				display: block;
+			}
+		
+		#pinglun {
+			position: relative;
+			width: 1250px;
+			height: 1190px;
+		}
+			
+			div.aside {
+			position: absolute;
+				width: 210px;
+				height: 3473px;
+				left: 0;
+				margin-bottom: 20px;
+				/*background-color: yellowgreen;*/
+			}
+			
+			div.popbox {
+				width: 210px;
+				height: 194px;
+				margin-bottom: 15px;
+				/*//background-color: greenyellow;*/
+			}
+			
+			div.shopName {
+				width: 210px;
+				height: 42px;
+				/*padding: 10px;*/
+				background-color: #f7f7f7;
+				border: 1px solid #eee;
+			}
+			
+			h3 {
+				max-width: 160px;
+				height: 18px;
+				padding: 10px;
+				font-weight: 700;
+				font-size: 14px;
+				font-family: "microsoft yahei";
+				float: left;
+				overflow: hidden;
+				display: block;
+				/*//background-color: lightgoldenrodyellow;*/
+			}
+			
+			a {
+				color: #666666;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			
+			a:hover {
+				color: red;
+			}
+			
+			div.score {
+				width: 210px;
+				height: 152px;
+				/*padding: 0px 10px 10px 10px;*/
+				border: 1px solid #eee;
+				border-top: none;
+				cursor: pointer;
+			}
+			
+			div.scoreForShop {
+				width: 188px;
+				height: 95px;
+				border-bottom: 1px solid #eee;
+			}
+			
+			div.score-sum {
+				float: left;
+				width: 78px;
+				display: inline;
+				margin-top: 15px;
+				color: #999;
+			}
+			
+			span.number {
+				color: #E94634;
+				text-align: center;
+				font-size: 24px;
+				line-height: 45px;
+				color: #E94634;
+				display: block;
+			}
+			
+			div.score-parts {
+				float: left;
+				width: 110px;
+				color: #666666;
+			}
+			
+			div.score-part {
+				overflow: hidden;
+				display: inline-block;
+				margin-bottom: 5px;
+			}
+			
+			span.score-trend.sprite-up {
+				width: 9px;
+				height: 9px;
+				background-image: url(../img/__sprite.png);
+				background-position: -19px -34px;
+			}
+			
+			div.btns {
+				padding: 10px 0;
+				font-size: 0;
+				text-align: center;
+			}
+			
+			a.btn2 {
+				width: 88px;
+				height: 34px;
+				line-height: 34px;
+				padding: 0;
+				margin-right: 8px;
+				font-size: 12px;
+				border: 1px solid #ddd;
+				background-color: #f8f8f8;
+				color: #666;
+				display: inline-block;
+				text-align: center;
+				vertical-align: middle;
+				cursor: pointer;
+				text-decoration: none;
+			}
+			
+			i.sprite-enter {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				vertical-align: -2px;
+				background: url(../img/__sprite.png) no-repeat;
+				background-position: -34px 0;
+			}
+			
+			i.sprite-follow {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				vertical-align: -2px;
+				background: url(../img/__sprite.png) no-repeat;
+				background-position: -34px -16px;
+			}
+			
+			div.search {
+				margin-bottom: 15px;
+				overflow: hidden;
+				display: block;
+			}
+			
+			div.mc {
+				padding: 8px;
+				border: 1px solid #eee;
+				border-top: none;
+				overflow: visible;
+			}
+			
+			p {
+				overflow: hidden;
+				padding: 2px;
+				display: block;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+			}
+			
+			p.item1 input {
+				width: 104px;
+				border: 1px solid #ccc;
+				padding: 2px;
+			}
+			
+			p.item2 input {
+				border: 1px solid #ccc;
+				padding: 2px;
+				width: 3em;
+			}
+			
+			p.item3 input {
+				margin-left: -1px;
+				background: #fff;
+				color: #000;
+				padding: 3px 10px;
+				border-radius: 3px;
+				cursor: pointer;
+				border: 1px solid #ccc;
+			}
+			
+			div.no-padding {
+				margin-top: -1px;
+				border: 1px solid #eee;
+				border-top: none;
+			}
+			
+			div.category {
+				margin-bottom: 15px;
+				width: 210px;
+			}
+			
+			dl {
+				display: block;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+			}
+			
+			
+			
+			
+			s {
+				display: block;
+				position: absolute;
+				left: 10px;
+				top: 6px;
+				width: 16px;
+				height: 16px;
+				cursor: pointer;
+			}
+			
+			s.picture1 {
+				background: url(../img/20130603A.png) no-repeat;
+				background-position: -20px 0;
+			}
+			
+			s.picture2 {
+				background: url(../img/20130603A.png) no-repeat;
+				background-position: -37px 0;
+			}
+			
+			dl a {
+				display: block;
+				height: 28px;
+				line-height: 28px;
+				text-decoration: none;
+			}
+			
+			dd {
+				/*display: none;*/
+				-webkit-margin-start: 40px;
+			}
+			
+			div.hideDiv1 {
+				display: none;
+			}
+			div.hideDiv2 {
+				display: none;
+			}
+			
+			dd a {
+				padding-left: 37px;
+				height: 26px;
+				line-height: 26px;
+				white-space: nowrap;
+				display: block;
+			}
+			/*右边一栏*/
+			
+			div.detail {
+				width: 990px;
+				min-height: 220px;
+				float: right;
+				display: inline;
+				overflow: hidden;
+				/*background-color: yellow;*/
+			}
+			
+			div.tabMain {
+				background-color: #f7f7f7;
+				border: 1px solid #eee;
+				border-bottom: 1px solid #b23cef;
+				display: block;
+				position: relative;
+				overflow: visible;
+				z-index: 2;
+			}
+			
+			div.tabMain ul {
+				margin-top: -1px;
+				display: block;
+				list-style-type: disc;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+			
+			div.tabMain li.selected {
+				background-color: #b23cef;
+				color: #fff;
+				cursor: default;
+				padding: 10px 25px;
+				font-size: 14px;
+				position: relative;
+				display: inline-block;
+				font-family: "microsoft yahei";
+				text-align: -webkit-match-parent;
+			}
+			
+			div.tabMain li {
+			
+				padding: 10px 25px;
+				font-size: 14px;
+				position: relative;
+				display: inline-block;
+				font-family: "microsoft yahei";
+				text-align: -webkit-match-parent;
+				cursor: pointer;
+			}
+			
+			div.extra {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: block;
+			}
+			
+			div.buy {
+				float: left;
+				margin-right: 10px;
+				padding-top: 8px;
+			}
+			
+			div.inner {
+				line-height: 23px;
+				float: left;
+				z-index: 1;
+				padding: 1px 1px 0;
+				cursor: pointer;
+				position: relative;
+			}
+			
+			span.icon-qr {
+				margin-left: 10px;
+				width: 16px;
+				height: 16px;
+				overflow: hidden;
+				line-height: 1000px;
+				background: url(../img/qr-thumb.png) no-repeat;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			
+			span.text {
+				margin-left: 5px;
+			}
+			
+			span.arr-close {
+				display: inline-block;
+				vertical-align: middle;
+				width: 13px;
+				height: 7px;
+				margin: 0 10px 0 5px;
+				background: url(../img/arr-close.png) no-repeat;
+			}
+			
+			div.shopCar {
+				display: block;
+				float: right;
+				margin-right: 10px;
+				padding-top: 8px;
+				position: relative;
+			}
+			
+			div.head {
+				height: 23px;
+				line-height: 23px;
+				float: left;
+				z-index: 1;
+				padding: 1px 1px 0;
+				cursor: pointer;
+				position: relative;
+			}
+			
+			a.btn-primary {
+				height: 28px;
+				line-height: 28px;
+				padding: 0 16px;
+				background-color: #7a45e5;
+				color: #fff;
+				display: inline-block;
+				text-align: center;
+				vertical-align: middle;
+				cursor: pointer;
+				text-decoration: none;
+			}
+			
+			div.tabCon {
+				overflow: hidden;
+				padding: 10px 0;
+				display: block;
+			}
+			
+			div.parameter {
+				padding: 0 10px 10px;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #eee;
+			}
+			
+			div.hide {
+				display: none;
+				background-color: yellow;
+			}
+			
+			ul.parameter1-list {
+				padding: 20px 0 15px;
+				overflow: hidden;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+			
+			ul.parameter-list {
+				padding-bottom: 0;
+				padding: 20px 0 15px;
+				overflow: hidden;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+			
+			ul.parameter2-list {
+				padding: 20px 0 15px;
+				overflow: hidden;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+			
+			li.fore0 {
+				width: 200px;
+				padding-left: 42px;
+				float: left;
+				margin-bottom: 5px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: list-item;
+				text-align: -webkit-match-parent;
+			}
+			
+			i.i-phone {
+				height: 31px;
+				background: url(../img/param1.png) no-repeat;
+				float: left;
+				width: 33px;
+				height: 33px;
+				overflow: hidden;
+				line-height: 1000px;
+				margin-top: 2px;
+				margin-left: -37px;
+				background-position: 0 0;
+				white-space: nowrap;
+			}
+			
+			i.i-camera {
+				float: left;
+				width: 33px;
+				height: 33px;
+				overflow: hidden;
+				line-height: 1000px;
+				margin-top: 2px;
+				margin-left: -37px;
+				background: url(../img/param2.png) no-repeat;
+				background-position: 0 0;
+			}
+			
+			i.i-cpu {
+				float: left;
+				width: 33px;
+				height: 33px;
+				overflow: hidden;
+				line-height: 1000px;
+				margin-top: 2px;
+				margin-left: -37px;
+				background: url(../img/param3.png)no-repeat;
+				background-position: 0 0;
+			}
+			
+			li.fDetail {
+				width: 197px;
+				min-height: 0px;
+				float: right;
+				display: inline;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			
+			p.fenBianLv {
+				width: 100%;
+				line-height: 18px;
+				margin-bottom: 4px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			
+			a.btn-def {
+				color: #666;
+				margin-left: 5px;
+				border: 1px solid #ddd;
+				background-color: #f8f8f8;
+				height: 23px;
+				line-height: 23px;
+				padding: 0 10px;
+				display: inline-block;
+				text-align: center;
+				vertical-align: middle;
+				cursor: pointer;
+			}
+			
+			div.parameter ul li {
+				width: 200px;
+				padding-left: 42px;
+				float: left;
+				margin-bottom: 5px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: list-item;
+				text-align: -webkit-match-parent;
+			}
+			
+			p.more-par {
+				padding-right: 20px;
+				margin-top: -5px;
+				text-align: right;
+			}
