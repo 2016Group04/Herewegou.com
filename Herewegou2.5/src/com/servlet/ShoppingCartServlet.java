@@ -40,7 +40,7 @@ public class ShoppingCartServlet extends HttpServlet {
 		}
 	}
 	
-	//到购物车
+	//  到购物车
 	public void goToShoppingCart(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
