@@ -65,7 +65,7 @@ public class ShoppingCartServlet extends HttpServlet {
 	
 	
 	
-	
+	//加入到购物车
 	public void addToShoppingCart(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
