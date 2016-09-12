@@ -40,7 +40,7 @@ public class ShoppingCartServlet extends HttpServlet {
 		}
 	}
 	
-	//  到购物车
+	//  到购物车之前的处理
 	public void goToShoppingCart(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
@@ -62,6 +62,7 @@ public class ShoppingCartServlet extends HttpServlet {
 		request.getRequestDispatcher(target).forward(request, response);
 
 	}
+	
 	
 	
 	
