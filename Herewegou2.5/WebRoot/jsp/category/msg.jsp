@@ -20,7 +20,7 @@
   		if(msg.equals("保存一级商品种类成功")){
   			target = "addCategory.jsp";
   		}else if (msg.equals("保存二级商品种类成功")){
-  			target = "CategoryServlet?action=getAllCategory1";
+  			target = "CategoryServlet?action=toAddCategory2jsp";
   		}
   	%>
   	<script type="text/javascript" src="../../js/jquery-1.7.2.js" charset="utf-8"></script>

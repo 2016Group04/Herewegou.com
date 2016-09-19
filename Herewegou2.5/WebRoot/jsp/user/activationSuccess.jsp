@@ -5,7 +5,7 @@
 
 <head>
 <meta charset="utf-8" />
-<title>京东(JD.COM)-综合网购首选-正品低价、品质保障、配送及时、轻松购物！</title>
+<title>HWG(HWG.COM)-综合网购首选-正品低价、品质保障、配送及时、轻松购物！</title>
 <link rel="shortcut icon" href="jd-title.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="css/top.css" />
 </head>
@@ -117,7 +117,7 @@
 																		mc:edit="body_content"
 																		style="text-align:center;padding-left:20px;padding-bottom:30px;padding-right:20px;padding-top:30px;font-family:Microsoft YaHei;mso-table-rspace:0pt;mso-table-lspace:0pt;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#8A9BA8;line-height:13px;font-size:11px;">这是一封自动发送的邮件；如果您并未要求但收到这封信件，您不需要进行任何操作。
 																		要了解更多信息，请访问 <a href="https://support.jd.com"
-																		target="_blank">JD 技术支持</a>
+																		target="_blank">HWG 技术支持</a>
 																	</td>
 																</tr>
 															</tbody>

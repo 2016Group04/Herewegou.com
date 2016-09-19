@@ -24,7 +24,7 @@ public class ClientUserDaoImpl implements ClientUserDao {
 	@Override
 	public boolean addClientUser(ClientUser clientUser) {
 		boolean registerSuccess = false;
-		String sql = "INSERT INTO clientUser(userid,userAccount,PASSWORD,isActive,mail,phoneNum,Nickname) VALUES(seq_clientUser.Nextval,?,?,0,?,?,'JD_'||seq_clientUser.Nextval)"; 
+		String sql = "INSERT INTO clientUser(userid,userAccount,PASSWORD,isActive,mail,phoneNum,Nickname) VALUES(seq_clientUser.Nextval,?,?,0,?,?,'HWG_'||seq_clientUser.Nextval)"; 
 		PreparedStatement pstmt = null;
 		//建立通道
 		try {
@@ -428,7 +428,7 @@ public ClientUser getClientUserByUser(String user) {
 				clientUser.setPassword(rs.getString(3));
 				clientUser.setNickname(rs.getString(5));
 				clientUser.setPhoneNumber(rs.getLong(9));
-				clientUser.setMail(rs.getString(11));
+				clientUser.setMail(rs.getString(12));
 			}
 			
 		} catch (SQLException e) {

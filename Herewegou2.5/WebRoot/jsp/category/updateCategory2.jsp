@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,com.vo.Category,com.vo.Category2,com.page.PageInfo"
+<%@ page language="java" import="java.util.*,com.po.Category,com.po.Category2,com.page.PageInfo"
 	pageEncoding="UTF-8"%>
 
 
@@ -62,8 +62,8 @@
 					%>
 					</select>
 					</li>
-					<li>
-						<input type="submit" class="btn submit-btn" value="提交" />
+					<li style="padding-top:7px">
+						<input type="submit" class="btn submit-btn" value="提交" style="width:46px; height:26px" />
 					</li>
 				</ul>
 			</form>

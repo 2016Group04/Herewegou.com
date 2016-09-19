@@ -67,7 +67,7 @@ form label.inputName {
 }
 
 form input {
-	width: 120px;
+	width: 200px;
 	padding: 15px 40px;
 	padding-right: 0px;
 	font-size: 14px;
@@ -93,7 +93,7 @@ label.inputFont {
 #usernameLabel,
 #passwordLabel,
 #passwordSureLabel {
-	width: 190px;
+	width: 200px;
 }
 
 form div.notTishi {
@@ -237,7 +237,15 @@ div#changeToPhone a {
 }
 
 #submitImedietaly {
-	background-color: #EE2222;
+	background: #7a45e5;
+    background: -moz-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -webkit-gradient(linear,left top,right top,color-stop(20%,#7a45e5),color-stop(80%,#b23cef));
+    background: -webkit-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -o-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: -ms-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
+    background: linear-gradient(to right,#7a45e5 20%,#b23cef 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7a45e5', endColorstr='#b23cef', GradientType=1);
+	
 	text-align: center;
 	line-height: 50px;
 	color: #fff;

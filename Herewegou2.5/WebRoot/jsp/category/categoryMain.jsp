@@ -1,5 +1,5 @@
 <%@ page language="java"
-	import="java.util.*,com.vo.Category,com.page.PageInfo"
+	import="java.util.*,com.po.Category,com.page.PageInfo"
 	pageEncoding="UTF-8"%>
 
 

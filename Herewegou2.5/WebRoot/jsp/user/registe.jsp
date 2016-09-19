@@ -13,7 +13,7 @@
 	<body>
 		<div class="top">
 			<div class="topall">
-				<a class="logo" href="http://www.jd.com"></a><!--连接到京东首页-->
+				<a class="logo" href="index.jsp"></a><!--连接到HWG首页-->
 				<div id="welcom">欢 迎 注 册</div>
 				<div id="login">
 					已有账号
@@ -158,7 +158,7 @@
 
 						<div id="agreeProtocol">
 							<input type="checkbox" name="agree" id="agree" checked="checked"/>我已阅读并同意
-							<a id="protocol"> 《京东用户注册协议》</a>
+							<a id="protocol"> 《HWG用户注册协议》</a>
 						</div>
 						<div class="tishi" id="protocolT">
 							<div id="protocol" class="image"></div><a></a>
@@ -194,16 +194,16 @@
 					<a>   人才招聘   </a>|
 					<a>   商家入驻   </a>|
 					<a>   广告服务   </a>|
-					<a>   手机京东   </a>|
+					<a>   手机HWG   </a>|
 					<a>   友情链接   </a>|
 					<a>   销售联盟   </a>|
-					<a>   京东社区   </a>|
-					<a>   京东公益   </a>|
+					<a>   HWG社区   </a>|
+					<a>   HWG公益   </a>|
 					<a>   English site   </a>
 				</div>
 
 				<div id="copyright">
-					Copyright©2004-2016 京东JD.com 版权所有
+					Copyright©2004-2016 HWG.com 版权所有
 				</div>
 			</div>
 		</div>

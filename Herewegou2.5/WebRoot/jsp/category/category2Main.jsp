@@ -1,5 +1,5 @@
 <%@ page language="java"
-	import="java.util.*,com.vo.Category2,com.page.PageInfo"
+	import="java.util.*,com.po.Category2,com.page.PageInfo"
 	pageEncoding="UTF-8"%>
 
 
@@ -41,9 +41,9 @@
 
 			<%
 				List<Category2> list = (List<Category2>)request.getAttribute("list");
-															Iterator<Category2> it = list.iterator();
-															while(it.hasNext()){
-																Category2 c = it.next();
+					Iterator<Category2> it = list.iterator();
+						while(it.hasNext()){
+							Category2 c = it.next();
 			%>
 			<ul class="item">
 				<li class="cid-li"><%=c.getCid()%></li>

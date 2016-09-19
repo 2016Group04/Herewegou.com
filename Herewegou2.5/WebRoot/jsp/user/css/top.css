@@ -795,8 +795,6 @@ a.selected {
 #categorys .dd {
 	display: none;
 	height: 466px;
-	background: #b23cef;
-	    background-color: #C81623;
     background: #7a45e5;
     background: -moz-linear-gradient(left,#7a45e5 20%,#b23cef 80%);
     background: -webkit-gradient(linear,left top,right top,color-stop(20%,#7a45e5),color-stop(80%,#b23cef));
@@ -991,7 +989,8 @@ a.selected {
 	border: 1px solid #b23cef;
 	position: relative;
 	height: 82px;
-	width: 208px
+	width: 208px;
+	overflow: hidden;
 }
 
 #categorys .subitems dl {

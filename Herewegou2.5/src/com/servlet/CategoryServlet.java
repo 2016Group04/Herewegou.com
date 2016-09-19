@@ -4,9 +4,7 @@ package com.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,15 +12,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.page.PageInfo;
-import com.service.impl.Category2ServiceImpl;
-import com.service.impl.Category3ServiceImpl;
-import com.service.impl.CategoryServiceImpl;
-import com.service.inter.Category2Service;
-import com.service.inter.Category3Service;
-import com.service.inter.CategoryService;
-import com.vo.Category;
-import com.vo.Category2;
-import com.vo.Category3;
+import com.po.Category;
+import com.po.Category2;
+import com.service.implMybatis.Category2ServiceImpl;
+import com.service.implMybatis.CategoryServiceImpl;
+import com.service.interMybatis.Category2Service;
+import com.service.interMybatis.CategoryService;
 
 public class CategoryServlet extends HttpServlet {
 
@@ -63,9 +58,9 @@ public class CategoryServlet extends HttpServlet {
 			this.getCategory2PageByCondition(request, response);
 		} else if (action.equals("toAddCategory3jsp")) {
 			this.toAddCategory3jsp(request, response);
-		} else if (action.equals("addCategory3")) {
+		} /*else if (action.equals("addCategory3")) {
 			this.addCategory3(request, response);
-		} else if (action.equals("getCategory2ByFid")) {
+		}*/ else if (action.equals("getCategory2ByFid")) {
 			this.getCategory2ByFid(request, response);
 		}else if("hasCategory".equals(action)){
 			hasCategory(request,response);
@@ -170,7 +165,7 @@ public class CategoryServlet extends HttpServlet {
 		request.getRequestDispatcher(target).forward(request, response);
 	}
 
-	private void addCategory3(HttpServletRequest request,
+	/*private void addCategory3(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String target = "";
 
@@ -196,7 +191,7 @@ public class CategoryServlet extends HttpServlet {
 		request.setAttribute("msg", "保存商品成功");
 		request.getRequestDispatcher(target).forward(request, response);
 	}
-
+*/
 	private void toAddCategory2jsp(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("in toAddCategory2jsp");
@@ -476,7 +471,7 @@ public class CategoryServlet extends HttpServlet {
 
 		String condition = request.getParameter("condition");
 
-		service.deleteCategoryById(cid);
+		int result = service.deleteCategoryById(cid);
 
 		// 转发视图
 		if (!(condition == null || condition.trim().equals("") || condition

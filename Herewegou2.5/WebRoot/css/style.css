@@ -14,8 +14,13 @@ li {
 	list-style: none;
 }
 
-label, select {
+label {
 	padding-top: 5px;
+	font-family: Microsoft JhengHei;
+	font-size:16px;
+}
+
+select {
 	font-family: Microsoft JhengHei;
 	font-size:16px;
 }
