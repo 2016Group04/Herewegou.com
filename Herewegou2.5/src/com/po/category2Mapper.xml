@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<mapper namespace="com.po.category2Mapper">
+	<insert id="addCategory" 
+		parameterType="Category2">
+		insert into Category2 values(seq_category2.nextval,#{cname},#{cdesc},#{fid})	
+	</insert>
+	
+	<delete id="deleteCategory" 
+		parameterType="Category2">
+		delete from Category2 where cid = #{cid}	
+	</delete>
+	
+	<update id="updateCategory" 
+		parameterType="Category2">
+		update Category2 set cname=#{cname}, cdesc=#{cdesc}, fid=#{fid} where cid = #{cid}	
+	</update>
+	
+	<select id="getCategoryById" 
+		parameterType="java.lang.Integer" resultType="Category2">
+		select * from Category2 where cid = #{cid}	
+	</select>
+	
+	<select id="getCategoryByQuery" 
+		parameterType="java.lang.String" resultType="Category2">
+		${value}
+	</select>
+	
+	<select id="getAllRecordCount" 
+		parameterType="java.lang.String" resultType="int">
+		${value}
+	</select>
+</mapper>

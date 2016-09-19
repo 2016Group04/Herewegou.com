@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<mapper namespace="com.po.productMapper">
+	<insert id="addProduct" 
+		parameterType="product">
+		insert into product values(null,#{cname},#{cdesc},#{fid})	
+	</insert>
+	
+	<delete id="deleteProduct" 
+		parameterType="product">
+		delete from product where cid = #{cid}	
+	</delete>
+	
+	<update id="updateProduct" 
+		parameterType="product">
+		update product set cname=#{cname}, cdesc=#{cdesc} where cid = #{cid}	
+	</update>
+	
+	<select id="getProductById" 
+		parameterType="java.lang.Integer" resultType="product">
+		select * from product where cid = #{cid}	
+	</select>
+	
+	<select id="getProductByQuery" 
+		parameterType="java.lang.String" resultType="product">
+		${value}
+	</select>
+	
+	<select id="getAllRecordCount" 
+		parameterType="java.lang.String" resultType="int">
+		${value}
+	</select>
+</mapper>
